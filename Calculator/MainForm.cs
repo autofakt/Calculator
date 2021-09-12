@@ -376,5 +376,22 @@ namespace Calculator
             else
                 displayLabel.Text = Math.Sqrt(convertToDouble).ToString();
         }
+
+        private void cBtn_Click(object sender, EventArgs e)
+        {
+            operand1 = 0;
+            operand2 = 0;
+            operator1 = "";
+            gotFirstOperand = false;
+            inputOn = true;
+            displayLabel.Text = "0";
+        }
+
+        private void x2Btn_Click(object sender, EventArgs e)
+        {
+            double convertToDouble = double.Parse(displayLabel.Text);
+            displayLabel.Text = (convertToDouble * convertToDouble).ToString();
+
+        }
     }
 }

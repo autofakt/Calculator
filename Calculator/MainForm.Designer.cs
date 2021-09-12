@@ -96,6 +96,7 @@ namespace Calculator
             this.x2Btn.TabIndex = 3;
             this.x2Btn.Text = "x^2";
             this.x2Btn.UseVisualStyleBackColor = true;
+            this.x2Btn.Click += new System.EventHandler(this.x2Btn_Click);
             // 
             // x1Btn
             // 
@@ -120,12 +121,12 @@ namespace Calculator
             // 
             // backBtn
             // 
-            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.backBtn.Location = new System.Drawing.Point(217, 144);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(112, 50);
             this.backBtn.TabIndex = 7;
-            this.backBtn.Text = "back";
+            this.backBtn.Text = "←";
             this.backBtn.UseVisualStyleBackColor = true;
             // 
             // cBtn
@@ -137,6 +138,7 @@ namespace Calculator
             this.cBtn.TabIndex = 6;
             this.cBtn.Text = "C";
             this.cBtn.UseVisualStyleBackColor = true;
+            this.cBtn.Click += new System.EventHandler(this.cBtn_Click);
             // 
             // ceBtn
             // 
