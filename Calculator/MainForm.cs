@@ -411,5 +411,21 @@ namespace Calculator
             else
                 SystemSounds.Beep.Play();
         }
+
+        private void dotBtn_Click(object sender, EventArgs e)
+        {
+            string temp = displayLabel.Text;
+            if (temp.Contains('.'))
+                ;
+            else
+            {   
+                displayLabel.Text = temp + ".";
+            }
+        }
+
+        private void ceBtn_Click(object sender, EventArgs e)
+        {
+            displayLabel.Text = "0";
+        }
     }
 }

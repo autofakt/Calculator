@@ -150,6 +150,7 @@ namespace Calculator
             this.ceBtn.TabIndex = 5;
             this.ceBtn.Text = "CE";
             this.ceBtn.UseVisualStyleBackColor = true;
+            this.ceBtn.Click += new System.EventHandler(this.ceBtn_Click);
             // 
             // xBtn
             // 
@@ -312,6 +313,7 @@ namespace Calculator
             this.dotBtn.TabIndex = 23;
             this.dotBtn.Text = ".";
             this.dotBtn.UseVisualStyleBackColor = true;
+            this.dotBtn.Click += new System.EventHandler(this.dotBtn_Click);
             // 
             // zeroBtn
             // 
