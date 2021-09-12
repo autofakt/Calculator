@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -392,6 +393,23 @@ namespace Calculator
             double convertToDouble = double.Parse(displayLabel.Text);
             displayLabel.Text = (convertToDouble * convertToDouble).ToString();
 
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            if (inputOn)
+            {
+                string text = displayLabel.Text;
+                if (text.Length > 1)
+                {
+                    string newText = text.Remove(text.Length - 1);
+                    displayLabel.Text = newText;
+                }
+                else
+                    displayLabel.Text = "0";
+            }
+            else
+                SystemSounds.Beep.Play();
         }
     }
 }

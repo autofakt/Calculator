@@ -83,7 +83,7 @@ namespace Calculator
             this.sRootBtn.Name = "sRootBtn";
             this.sRootBtn.Size = new System.Drawing.Size(112, 50);
             this.sRootBtn.TabIndex = 2;
-            this.sRootBtn.Text = "sRoot";
+            this.sRootBtn.Text = "√";
             this.sRootBtn.UseVisualStyleBackColor = true;
             this.sRootBtn.Click += new System.EventHandler(this.sRootBtn_Click);
             // 
@@ -94,7 +94,7 @@ namespace Calculator
             this.x2Btn.Name = "x2Btn";
             this.x2Btn.Size = new System.Drawing.Size(112, 50);
             this.x2Btn.TabIndex = 3;
-            this.x2Btn.Text = "x^2";
+            this.x2Btn.Text = "x²";
             this.x2Btn.UseVisualStyleBackColor = true;
             this.x2Btn.Click += new System.EventHandler(this.x2Btn_Click);
             // 
@@ -128,6 +128,7 @@ namespace Calculator
             this.backBtn.TabIndex = 7;
             this.backBtn.Text = "←";
             this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // cBtn
             // 
@@ -157,7 +158,7 @@ namespace Calculator
             this.xBtn.Name = "xBtn";
             this.xBtn.Size = new System.Drawing.Size(112, 50);
             this.xBtn.TabIndex = 12;
-            this.xBtn.Text = "X";
+            this.xBtn.Text = "*";
             this.xBtn.UseVisualStyleBackColor = true;
             this.xBtn.Click += new System.EventHandler(this.button9_Click);
             // 
