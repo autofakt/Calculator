@@ -35,6 +35,7 @@ namespace Calculator
             operator1 = "*";
             gotFirstOperand = true;
             inputOn = false;
+
         }
 
         private void sevenBtn_Click(object sender, EventArgs e)
@@ -337,6 +338,7 @@ namespace Calculator
                 }
 
                 displayLabel.Text = sum.ToString();
+                historyListBox.Items.Add(operand1 + " " + operator1 + " " + operand2 + " = " + sum);
                 operand1 = sum;
                 inputOn = false;
             }
@@ -365,6 +367,7 @@ namespace Calculator
             {
                 convertToDouble = convertToDouble * -1;
                 displayLabel.Text = convertToDouble.ToString();
+                historyListBox.Items.Add("negation(" + (convertToDouble * -1).ToString() + ") = " + convertToDouble.ToString());
             }
         }
 
@@ -375,7 +378,10 @@ namespace Calculator
             if (convertToDouble < 0)
                 displayLabel.Text = "Invalid Input";
             else
+            {
                 displayLabel.Text = Math.Sqrt(convertToDouble).ToString();
+                historyListBox.Items.Add("√" + convertToDouble.ToString() + " = " + Math.Sqrt(convertToDouble).ToString());
+            }
         }
 
         private void cBtn_Click(object sender, EventArgs e)
@@ -392,6 +398,7 @@ namespace Calculator
         {
             double convertToDouble = double.Parse(displayLabel.Text);
             displayLabel.Text = (convertToDouble * convertToDouble).ToString();
+            historyListBox.Items.Add(convertToDouble.ToString() + "²" + " = " + (convertToDouble * convertToDouble).ToString());
 
         }
 
@@ -426,6 +433,19 @@ namespace Calculator
         private void ceBtn_Click(object sender, EventArgs e)
         {
             displayLabel.Text = "0";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (historyPanel.Visible == false)
+                historyPanel.Visible = true;
+            else
+                historyPanel.Visible = false;
+        }
+
+        private void historyPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
