@@ -111,6 +111,7 @@ namespace Calculator
             this.x1Btn.TabIndex = 4;
             this.x1Btn.Text = "1/x";
             this.x1Btn.UseVisualStyleBackColor = true;
+            this.x1Btn.Click += new System.EventHandler(this.x1Btn_Click);
             // 
             // divBtn
             // 

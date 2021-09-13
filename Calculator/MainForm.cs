@@ -447,5 +447,13 @@ namespace Calculator
         {
 
         }
+
+        private void x1Btn_Click(object sender, EventArgs e)
+        {
+            double convertToDouble = double.Parse(displayLabel.Text);
+            displayLabel.Text = (1/ convertToDouble).ToString();
+            historyListBox.Items.Add("1/" + convertToDouble.ToString()  + " = " + (1 / convertToDouble).ToString());
+
+        }
     }
 }
