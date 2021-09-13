@@ -455,5 +455,10 @@ namespace Calculator
             historyListBox.Items.Add("1/" + convertToDouble.ToString()  + " = " + (1 / convertToDouble).ToString());
 
         }
+
+        private void eraseHistoryBtn_Click(object sender, EventArgs e)
+        {
+            historyListBox.Items.Clear();
+        }
     }
 }

@@ -57,6 +57,7 @@ namespace Calculator
             this.historyPanel = new System.Windows.Forms.Panel();
             this.historyListBox = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.eraseHistoryBtn = new System.Windows.Forms.Button();
             this.historyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -345,6 +346,7 @@ namespace Calculator
             // 
             // historyPanel
             // 
+            this.historyPanel.Controls.Add(this.eraseHistoryBtn);
             this.historyPanel.Controls.Add(this.historyListBox);
             this.historyPanel.Location = new System.Drawing.Point(-1, 97);
             this.historyPanel.Name = "historyPanel";
@@ -374,6 +376,16 @@ namespace Calculator
             this.button1.Text = "History";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // eraseHistoryBtn
+            // 
+            this.eraseHistoryBtn.Location = new System.Drawing.Point(177, 256);
+            this.eraseHistoryBtn.Name = "eraseHistoryBtn";
+            this.eraseHistoryBtn.Size = new System.Drawing.Size(72, 20);
+            this.eraseHistoryBtn.TabIndex = 27;
+            this.eraseHistoryBtn.Text = "Clear";
+            this.eraseHistoryBtn.UseVisualStyleBackColor = true;
+            this.eraseHistoryBtn.Click += new System.EventHandler(this.eraseHistoryBtn_Click);
             // 
             // MainForm
             // 
@@ -444,6 +456,7 @@ namespace Calculator
         private System.Windows.Forms.Panel historyPanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox historyListBox;
+        private System.Windows.Forms.Button eraseHistoryBtn;
     }
 }
 
