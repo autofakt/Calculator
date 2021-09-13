@@ -35,6 +35,7 @@ namespace Calculator
             operator1 = "*";
             gotFirstOperand = true;
             inputOn = false;
+
         }
 
         private void sevenBtn_Click(object sender, EventArgs e)
@@ -337,9 +338,9 @@ namespace Calculator
                 }
 
                 displayLabel.Text = sum.ToString();
+                historyListBox.Items.Add(operand1 + " " + operator1 + " " + operand2 + " = " + sum);
                 operand1 = sum;
                 inputOn = false;
-                historyListBox.Items.Add(operand1 + " " + operator1 + " " + operand2 + " = " + sum);
             }
         }
 
