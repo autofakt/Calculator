@@ -55,9 +55,9 @@ namespace Calculator
             this.zeroBtn = new System.Windows.Forms.Button();
             this.negateBtn = new System.Windows.Forms.Button();
             this.historyPanel = new System.Windows.Forms.Panel();
-            this.historyListBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.eraseHistoryBtn = new System.Windows.Forms.Button();
+            this.historyListBox = new System.Windows.Forms.ListBox();
+            this.historyBtn = new System.Windows.Forms.Button();
             this.historyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +80,7 @@ namespace Calculator
             this.modButton.TabIndex = 1;
             this.modButton.Text = "%";
             this.modButton.UseVisualStyleBackColor = true;
+            this.modButton.Click += new System.EventHandler(this.modButton_Click);
             // 
             // sRootBtn
             // 
@@ -356,6 +357,16 @@ namespace Calculator
             this.historyPanel.Visible = false;
             this.historyPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.historyPanel_Paint);
             // 
+            // eraseHistoryBtn
+            // 
+            this.eraseHistoryBtn.Location = new System.Drawing.Point(177, 256);
+            this.eraseHistoryBtn.Name = "eraseHistoryBtn";
+            this.eraseHistoryBtn.Size = new System.Drawing.Size(72, 20);
+            this.eraseHistoryBtn.TabIndex = 27;
+            this.eraseHistoryBtn.Text = "Clear";
+            this.eraseHistoryBtn.UseVisualStyleBackColor = true;
+            this.eraseHistoryBtn.Click += new System.EventHandler(this.eraseHistoryBtn_Click);
+            // 
             // historyListBox
             // 
             this.historyListBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -367,25 +378,15 @@ namespace Calculator
             this.historyListBox.Size = new System.Drawing.Size(436, 254);
             this.historyListBox.TabIndex = 0;
             // 
-            // button1
+            // historyBtn
             // 
-            this.button1.Location = new System.Drawing.Point(-1, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "History";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // eraseHistoryBtn
-            // 
-            this.eraseHistoryBtn.Location = new System.Drawing.Point(177, 256);
-            this.eraseHistoryBtn.Name = "eraseHistoryBtn";
-            this.eraseHistoryBtn.Size = new System.Drawing.Size(72, 20);
-            this.eraseHistoryBtn.TabIndex = 27;
-            this.eraseHistoryBtn.Text = "Clear";
-            this.eraseHistoryBtn.UseVisualStyleBackColor = true;
-            this.eraseHistoryBtn.Click += new System.EventHandler(this.eraseHistoryBtn_Click);
+            this.historyBtn.Location = new System.Drawing.Point(-1, -1);
+            this.historyBtn.Name = "historyBtn";
+            this.historyBtn.Size = new System.Drawing.Size(75, 23);
+            this.historyBtn.TabIndex = 26;
+            this.historyBtn.Text = "History";
+            this.historyBtn.UseVisualStyleBackColor = true;
+            this.historyBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -394,7 +395,7 @@ namespace Calculator
             this.ClientSize = new System.Drawing.Size(434, 383);
             this.Controls.Add(this.historyPanel);
             this.Controls.Add(this.x1Btn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.historyBtn);
             this.Controls.Add(this.equalsBtn);
             this.Controls.Add(this.dotBtn);
             this.Controls.Add(this.zeroBtn);
@@ -454,7 +455,7 @@ namespace Calculator
         private System.Windows.Forms.Button zeroBtn;
         private System.Windows.Forms.Button negateBtn;
         private System.Windows.Forms.Panel historyPanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button historyBtn;
         private System.Windows.Forms.ListBox historyListBox;
         private System.Windows.Forms.Button eraseHistoryBtn;
     }

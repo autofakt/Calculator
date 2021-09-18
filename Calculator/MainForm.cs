@@ -460,5 +460,21 @@ namespace Calculator
         {
             historyListBox.Items.Clear();
         }
+
+        private void modButton_Click(object sender, EventArgs e)
+        {
+            if (gotFirstOperand)
+            {
+                double percentage = double.Parse(displayLabel.Text);
+                double result = operand1 * percentage / 100;
+                displayLabel.Text = result.ToString();
+                historyListBox.Items.Add(percentage.ToString() + "% of " + operand1 + " = " + result.ToString());
+            }
+                
+            else
+            {
+                displayLabel.Text = "0";
+            }
+        }
     }
 }
