@@ -14,7 +14,7 @@ namespace Calculator
     public partial class MainForm : Form
     {
         double operand1;
-        string operator1;
+        string operator1 = "";
         double operand2;
         double sum;
 
@@ -422,11 +422,27 @@ namespace Calculator
         private void dotBtn_Click(object sender, EventArgs e)
         {
             string temp = displayLabel.Text;
-            if (temp.Contains('.'))
-                ;
+            if (operator1=="")
+            {
+                if (temp.Contains('.'))
+                    ;
+                else
+                {
+                    displayLabel.Text = temp + ".";
+                }
+            }
+            else if (operand1.ToString() == displayLabel.Text)
+            {
+                displayLabel.Text = "0.";
+            }
             else
-            {   
-                displayLabel.Text = temp + ".";
+            {
+                if (temp.Contains('.'))
+                    ;
+                else
+                {
+                    displayLabel.Text = temp + ".";
+                }
             }
         }
 
